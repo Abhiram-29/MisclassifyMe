@@ -9,6 +9,12 @@ transform = transforms.Compose([
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
 
+pretransform = transforms.Compose([
+    transforms.Resize(256),
+    transforms.CenterCrop(224),
+    transforms.ToTensor()
+])
+
 def fgsm(image, model, loss_fn,label=None,targeted = False,eps = 0.01):
     #Fast Gradient sign methord to generate adversarial images
     if targeted:
@@ -32,3 +38,19 @@ def fgsm(image, model, loss_fn,label=None,targeted = False,eps = 0.01):
     adv_x = image+eps*perturbations[0]
 
     return adv_x
+
+def pgd(image,target,model,loss_fn,steps,alpha,eps=0.01):
+    "Implementation of projected gradient descent to create adversarial images"
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    target = torch.tensor([target],device=device )
+    x = pretransform(image)
+    x = x.unsqueeze(0)
+    x = x.to(device)
+    x_adv = copy.deepcopy(x)
+    eta = torch.zeros_like(x_adv).to(device)
+    for i in range(steps):
+        x_adv = algos.fgsm(x_adv,model,loss_fn,label=target,targeted=True,eps=eps)
+        eta = x_adv-x
+        eta = clip_eps(eta,eps)
+        x_adv = x+eta
+    return x_adv
