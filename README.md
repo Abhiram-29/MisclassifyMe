@@ -88,3 +88,13 @@ This method produces better quality images and has a higher success rate for tar
     </td>
   </tr>
 </table>
+
+# Clone and run
+
+```bash
+git clone https://github.com/Abhiram-29/MisclassifyMe.git
+
+cd MisclassifiyMe.git
+
+# install dependencies
+pip install -r requirements.txt
