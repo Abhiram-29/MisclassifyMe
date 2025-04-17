@@ -14,37 +14,37 @@ Each pixel of the image is only modified by a small value($\epsilon$) so the cha
 <table>
   <tr>
     <td align="center">
-      <img src="testImages/dog_fgsm.png" alt="Treeing Walker Coonhound" width="300"><br>
+      <img src="images/dog_fgsm.png" alt="Treeing Walker Coonhound" width="300"><br>
       Input image(Treeing Walker Coonhound)
     </td>
     <td align="center">
-      <img src="testImages/dog_fgsm_pet.png" alt="Chihuahua" width="300"><br>
+      <img src="images/dog_fgsm_pet.png" alt="Chihuahua" width="300"><br>
       Generated FGSM petrubation
     </td>
      <td align="center">
-      <img src="testImages/dog_fgsm.png" alt="Chihuahua" width="300"><br>
+      <img src="images/dog_fgsm.png" alt="Chihuahua" width="300"><br>
       Image with petrubation applied(classified as Chihuahua)
     </td>
     <td align="center">
-      <img src="testImages/Chihuahua.jpg" alt="Chihuahua" width="300"><br>
+      <img src="images/Chihuahua.jpg" alt="Chihuahua" width="300"><br>
       Actual image of a Chihuahua
     </td>
   </tr>
   <tr>
      <td align="center">
-      <img src="testImages/bird.JPEG" alt="Treeing Walker Coonhound" width="300"><br>
+      <img src="images/bird.JPEG" alt="Treeing Walker Coonhound" width="300"><br>
       Input image(Magpi)
     </td>
     <td align="center">
-      <img src="testImages/bird_fgsm_pet.png" alt="Chihuahua" width="300"><br>
+      <img src="images/bird_fgsm_pet.png" alt="Chihuahua" width="300"><br>
       Generated FGSM petrubation
     </td>
      <td align="center">
-      <img src="testImages/bird_fgsm.png" alt="Chihuahua" width="300"><br>
+      <img src="images/bird_fgsm.png" alt="Chihuahua" width="300"><br>
       Image with petrubation applied(classified as Crayfish)
     </td>
     <td align="center">
-      <img src="testImages/creyfish.jpg" alt="Chihuahua" width="300"><br>
+      <img src="images/creyfish.jpg" alt="Chihuahua" width="300"><br>
       Actual image of a Crayfish
     </td>
   </tr>
@@ -61,29 +61,29 @@ This method produces better quality images and has a higher success rate for tar
 <table>
   <tr>
     <td align="center">
-      <img src="testImages/dog_fgsm.png" alt="Treeing Walker Coonhound" width="300"><br>
+      <img src="images/dog_fgsm.png" alt="Treeing Walker Coonhound" width="300"><br>
       Input image(Treeing Walker Coonhound)
     </td>
      <td align="center">
-      <img src="testImages/dog_pgd_wippet.png" alt="Chihuahua" width="300"><br>
+      <img src="images/dog_pgd_wippet.png" alt="Chihuahua" width="300"><br>
       Image with petrubation applied(classified as wippet,target was wippet)
     </td>
     <td align="center">
-      <img src="testImages/wippet.jpg" alt="Chihuahua" width="300"><br>
+      <img src="images/wippet.jpg" alt="Chihuahua" width="300"><br>
       Actual image of a wippet
     </td>
   </tr>
   <tr>
      <td align="center">
-      <img src="testImages/bird.JPEG" alt="Treeing Walker Coonhound" width="300"><br>
+      <img src="images/bird.JPEG" alt="Treeing Walker Coonhound" width="300"><br>
       Input image(Magpi)
     </td>
      <td align="center">
-      <img src="testImages/bird_pgd_koala.png" alt="Chihuahua" width="300"><br>
+      <img src="images/bird_pgd_koala.png" alt="Chihuahua" width="300"><br>
       Image with petrubation applied(classified as koala, target was koala)
     </td>
     <td align="center">
-      <img src="testImages/koala.jpg" alt="Chihuahua" width="300"><br>
+      <img src="images/koala.jpg" alt="Chihuahua" width="300"><br>
       Actual image of a koala
     </td>
   </tr>
